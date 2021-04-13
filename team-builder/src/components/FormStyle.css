@@ -1,0 +1,36 @@
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    color: #fff;
+    width: 100%;
+}
+
+/* .user-form{
+     display: flex;
+     flex-direction: column;
+     background-color: #333;
+     padding: .5rem;
+}
+
+.user-form > input {
+    width: 80%;
+    margin: .5rem auto;
+    padding: .4rem;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(107, 106, 106);
+}
+
+.user-form > input[type=text] {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+.user-form > input::placeholder {
+    color: #fff;
+} */
