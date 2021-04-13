@@ -5,8 +5,10 @@ const Form = () => {
   const [form, setForm] = useState({
     username: "",
     email: "",
+    role: "",
   });
 
+  // input change on form inputs
   const onInputChange = (e) => {
     setForm({
       ...form,
@@ -14,13 +16,21 @@ const Form = () => {
     });
   };
 
+  //submit handler
+  const submitHandler = (e) => {
+    e.preventDefault();
+    setForm({ username: "", email: "", role: "" });
+  };
+
+  //form submit
+
   return (
     <>
       <div className="form-container">
-        <form className="user-form">
+        <form onSubmit={submitHandler} className="user-form">
           <label>
-            Add Team Member :
             <input
+              className="form-input"
               type="text"
               name="username"
               placeholder="Username"
@@ -28,14 +38,20 @@ const Form = () => {
               maxLength={30}
             />
             <input
+              className="form-input"
               type="email"
               name="email"
               placeholder="Email"
               onChange={onInputChange}
               maxLength={30}
             />
+            <select name="role" onChange={onInputChange}>
+              <option selected>Front-End Developer</option>
+              <option>Back-End Developer</option>
+              <option>UX/UI Designer</option>
+            </select>
           </label>
-          <button>Sign Up</button>
+          <input type="button" value="Submit" />
         </form>
       </div>
     </>
